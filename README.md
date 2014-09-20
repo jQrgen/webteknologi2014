@@ -1,4 +1,4 @@
 webteknologi2014
 ================
 
-<blink>- The adventures of jQrgen and kim brang il</blink>
+<small>- The adventures of jQrgen and kim brang il</small>
