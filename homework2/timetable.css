@@ -1,0 +1,22 @@
+td {
+	height: 30px;
+	width: 100px;
+	border-style: solid;
+	border-width: 1px;
+}
+
+#headline {
+	margin-left: 200px;
+}
+
+.subjectContainer{
+	margin-left: 100px;
+	width: 450px;
+}
+.subjectContainer h2{
+	text-align: center;
+}
+
+.subjectContainer h4{
+	text-align: right;
+}
