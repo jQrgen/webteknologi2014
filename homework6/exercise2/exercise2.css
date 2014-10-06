@@ -1,0 +1,15 @@
+label{
+	font-size: 120%;
+	cursor: pointer;
+}
+
+input:invalid {
+	border: solid red 2px;
+}
+
+textarea:invalid {
+	border: solid red 2px;
+}
+
+input[type="radio"]:checked+label{ font-weight: bold; } 
+input[type="checkbox"]:checked+label{ font-weight: bold; } 

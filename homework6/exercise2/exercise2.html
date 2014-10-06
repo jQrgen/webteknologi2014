@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="exercise2.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<title> IT2805 - jQrgen</title>
+	</head>
+	<body>
+		<h1>Please enter the following information: </h1>
+		<p><span style="color:red;"> red </span> = required</p>
+		<form name="jQrgenform" id="formID" action="http://www.idi.ntnu.no/~michailg/IT2805/form.php" method="post">
+			<input name="name" type="text" placeholder="Name..." required autofocus><br>
+			<input name="email" type="email" placeholder="Email..." required><br>
+			<input name="address" type="text" placeholder="Address..."><br>
+			<input name="phone" type="number" placeholder="phone number..."><br>
+
+			<p> Type of student<span style="color:red" id="radio_error"></span>:</p>
+			<input class="radioinput" type="radio" name="year" value="1" id="1st" required><label for="1st">1st Year-Freshman</label><br>
+			<input type="radio" name="year" value="2" id="2st" required><label for="2st">2nd Year-Sophmore</label><br>
+			<input type="radio" name="year" value="3" id="3st" required><label for="3st">3rd Year-Junior</label><br>
+			<input type="radio" name="year" value="4" id="4st" required><label for="4st">4th Year-Senior</label><br>
+			<input type="radio" name="year" value="5" id="5st" required><label for="5st">5th Year-Senior</label><br>
+
+			<input name="startDate" type="date" placeholder="Course start date..." required><br>
+
+			<p>Choose class(es) you are attending<span style="color:red" id="checkbox_error"></span>:</p>
+			<input name="classes[]" type="checkbox" id="ITX1001" value="ITX1001" class="class_select"><label for="ITX1001">ITX1001: HTML Basic</label><br>
+			<input name="classes[]" type="checkbox" id="ITX1002" value="ITX1002" class="class_select"><label for="ITX1002">ITX1002: URLs and Site Structures</label><br>
+			<input name="classes[]" type="checkbox" id="ITX2001" value="ITX2001" class="class_select"><label for="ITX2001">ITX2002: Introduction to Cascading Style Sheets (CSS)</label><br>
+			<input name="classes[]" type="checkbox" id="ITX2002" value="ITX2002" class="class_select"><label for="ITX2002">ITX2002: CSS Properties and Applications</label><br>
+			<input name="classes[]" type="checkbox" id="ABC1001" value="ABC1001" class="class_select"><label for="ABC1001">ABC1001: Working with Multimedia on the Web</label><br>
+			<input name="classes[]" type="checkbox" id="JSX1000" value="JSX1000" class="class_select"><label for="JSX1000">JSX1000: Introduction to JavaScript</label><br>
+			<input name="classes[]" type="checkbox" id="JSX1040" value="JSX1040" class="class_select"><label for="JSX1040">JSX1040: JavaScript: DOM</label><br>
+			<input name="classes[]" type="checkbox" id="XML1000" value="XML1000" class="class_select"><label for="XML1000">XML1000: XML: Formatting Namespace Trees</label><br>
+			<br> 
+			<!-- If i made the assignment, i would have set this one to optional... -->
+			<textarea name="comments" rows="4" cols="50" placeholder="Comments or special requests..." required></textarea>
+			<input type="submit" value="Submit" id="subm">
+		</form>
+		<script type="text/javascript" src="exercise2.js"></script>
+	</body>
+</html>

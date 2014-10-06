@@ -1,0 +1,165 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="homework4.css">
+		<script type="text/javascript" src="homework4.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title> IT2805 </title>
+
+
+	</head>
+	<body>
+		<div id="container">
+			<div class="wrapper">
+			<div class="good">
+				<p>Student: Jørgen Svennevik Notland<br/>
+					Studentnummer: 739452
+					</p>
+				<p>Student: Brang Nu Bok Tong<br/>
+					Studentnummer: 751346
+				</p>	
+
+
+				<h1>1. Vurderingen av den gode siden</h1> 
+				<small> vurdering av <a href="http://www.nytimes.com" target="_blank">www.nytimes.com</a></small>
+<h2>Page title</h2>
+<p>On the main page of the website, this is the page title:
+&lt;title&gt;The New York Times - Breaking News, World News & Multimedia&lt;/title&gt;
+This is a title that adequately and briefly describes the content of the web page. The New York Times is a news website, and it has multimedia content on the website.</p>
+
+Viewing a news article page called “A Hobbyist Whose Workshop Sits Among the Cypress Trees”. The title changes to: &lt;title&gt;A Hobbyist Whose Workshop Sits Among the Cypress Trees - NYTimes.com&lt;/title&gt;
+
+This is a good title, because it takes into account the main content of the web page, the article, and also informs that the website containing the article is NYTimes.com. Screen readers will read the name of the article before the name of the website. which is convenient.
+
+<h2>Image text alternatives ("alt text")</h2>
+Even though we taught The New York Times Was the “Good website”, it has nearly no use of Image text alternatives. If you are using a screen reader, or has to disable images from loading, because you have a slow connection. This website is not optimal. 
+
+Most of the alt text tags are empty, but some has informative content. In articles, the main picture most of the time has a very long and descriptive alt tag. And here the alt tag holds the most important criteria for alt tags, which is to convey the same meaning as the picture. This screenshot: http://i.imgur.com/hxZ6zA1.png describes most of the website in context to Image text alternatives. This is not good enough for a modern website.
+
+<h2>Headings</h2>
+All heading on nytimes.com has a meaningfull hierarchy, with heading 1 at the top, heading 2, and 3 nested under subsequently. All pages on the website has at least one heading. All text on the website that looks like a heading, is marked up in html as a heading. Every heading that is marked up in HTML as a heading, is an actual conceptual heading, which makes it easier to understand the content and structure of the website as a blind person.
+
+<h2>Contrast ratio ("color contrast")</h2>
+The New York times is essentially a very high contrast website, and has a high contrast color profile of black in white all over the website. The background consists of white, and the content is black text. For all text on the website, the contrast ratio is over 4.5:1, which is recommended by the World Wide Web Consortium.
+Resize Text
+My current stack during this assignment is ubuntu 14.04 and the latest version of Firefox. When i zoom in with the standard zoom function, the page zooms in as one unit. The text does not zoom like in the example on http://www.w3.org/WAI/EO/Drafts/eval/checks. The text gets larger, does not get cut off, does not overlap, buttons form fields and other controls are visible and usable. With this zoom, horizontal scrolling is often required to read blocks of text. which is undesirable
+
+https://support.mozilla.org/en-US/kb/font-size-and-zoom-increase-size-of-web-pages
+<h2>Keyboard access and visual focus</h2>
+On nytimes.com, you can tab to all parts of the web page, and most impressive, after you tab two times, an invisible “tab menu” opens. In the tab menu you skip to content, or navigation. The selected tab has visual focus, image links works. The hamburger menu is easy accessible, and works with tab. has a text for sreen reading.
+<h2>Forms, labels, and errors (including Search fields)</h2>
+Labels are positioned correctly, to the left of email addresses, and to the right of radio buttons. Radio buttons text are not marked up as &lt;label&gt;, but with &lt;h3&gt;, tags. Other than that, the forms are easy accessible, and functional by keyboard.
+<h2>Multimedia (video, audio) alternatives</h2>
+Multimedia alternatives are accessible, but you cannot control the volume of the video, skip, or pause. You can just enter a site where the video autoplay when the site opens.
+Basic Structure Check
+The website is split into three columns, 2 with main content, and one with miscellaneous content.  Doing the checks by removing images and css,	 we see that the information makes sense in the order it is shown. Alternative text are sometimes providing adequate information for the missing images, but not always. Blocks of information have clearing headings, so its easier to navigate.
+
+For site evaluation by easy check list from the University of Maryland, please click on this <a href="http://folk.ntnu.no/bntong/Assignment4/Nytimes/">Link</a>.
+
+			</div>
+
+			<div class="bad">
+				<h1>2. Vurderingen av den dårlige siden </h1>
+					<p class="bb"> Vurderingen av <a href="http://www.boblad.no" target="_blank">www.boblad.no</a></p>
+	<h2>Page title</h2>
+	The page title is not displaying correctly in Norwegian language. It should be Bøblad intsead of B?blad and that is because they do not included meta tag in the head section of the html document. 
+
+
+	<h2>Image text alternatives ("alt text")</h2>
+	Almost non-existent “alt text” tag on this site. People who are blind and use screen reader will not be able to know what the picture is all about. And those with slow internet connection and have turned of images on websites will not be able to see the alt texts either. 
+
+
+	<h2>Headings</h2>
+	“Web pages often have sections of information separated by visual headings, for example, heading text is bigger and bold (like "Headings" right above this sentence :-). To make these work for everyone, the headings need to be marked up. That way people can navigate to the headings — including people who cannot use a mouse and use only the keyboard, and people who use a screen reader.” World Wide Web Consortium 
+	But this website has no heading tags inside its html document. This will make people with visual impairment and those who do not use or have mouse difficult to navigate to the headings. 
+
+
+	<h2>Contrast ratio ("color contrast")</h2>
+	The contrast of the site is high because it has white blackground and texts are in dark color. This will help people who needs high contrast ratio to read the content from the site. 
+
+
+	<h2>Resize Text</h2>
+	There is no problem with enlarging text size on the site even though it creates horizontal scrolling if texts becomes vey large. 
+
+
+
+	<h2>Keyboard access and visual focus</h2>
+
+	The site is very barebone and minimal. A user can navigate through links displayed on the website using Tab key on keyboard, but cannot tab onto the current and last news articles since the are no link. Users can only tab through archived articles where links are provided. So there is no way to access the current and latest news article by using only keyboard and screen reader. This site has very limited functionality for people with only keyboard and those with visual impaitments.  
+
+	<h2>Forms, labels, and errors </h2>
+	This local news site is so static that it does not have any forms, labels and errors to check. 
+
+
+	<h2>Multimedia (video, audio) alternatives</h2>
+	Impossible to check since the site we choose does not any media components. 
+
+	For site evaluation by easy check list from the University of Maryland, please click on this <a href="http://folk.ntnu.no/bntong/Assignment4/Boblad%20Evaluation.pdf">link(pdf)</a>.
+
+			</div>
+
+			<div class="forslaget">
+					<h1>3. Disposisjonen av siden vår. Maks 800 ord.</h1>
+					
+					<p>
+						1. <h3>The primary goal of the website, summarized in one or two sentences.</h3>
+							The primary goal of the website is to provide student related news to NTNU students. On this website,
+							students will be albe to share stories about their student lives, experiences, tips and tricks and any kinds of student related activities in Trondheim by sending them to the web administrator. <p>
+
+
+
+						<p>2. The number of web pages and a title for each page.<br/>
+							There will be about 10 pages and each of those will have different title.
+							<ol><li>Home</li>
+							<li>Student livet i Trondheim</li>
+							<li>About Us</li>
+							<li>Submit your stories</li>
+							<li>Tips & Tricks</li>
+							<li>Site Map</li>
+							<li>Eksamen</li>
+							<li>Media</li>
+							<li>Ny i Trondheim</li>
+							<li>Lenker</li></ol>
+							</p>
+
+
+							
+
+
+
+						<p>3. The potential audience, do you need to consider things like old browsers, resolutions, and other accessibility issues.
+							Our main audiences are students who are studying at NTNU. Since this website will contain mainly campus-student-related stuffs, NTNU students will be our main audience. 
+							We will also consider accessibility issues and follow W3C guides. Since our audience are mainly students who use smartphone alot, we will have to consider making our website responsive to those devices. </p>
+
+
+
+
+						<p>4. What multi-media content do you want to include?
+							We will make use of images and video to make our site more interesting.</p>
+
+
+						<p>5. What type of interactions and dynamic features do you want on your site?
+							We will have a section on our web page where students can send their unique stories to the webmaster(or post it by themselves) and then with their permission, post it on our websites.</p> 
+
+
+
+						<p>6. An indication of where you will be getting the content (including text, images and other multimedia files).
+							When it comes to text, it will mainly be students from where we will be getting our content. Images and videos will be from the internet and we will of course provide the sources in the readme file. For the time being, we still not have chosen the definite sources yet. </p>
+
+						<p>7. What did you learn from reviewing similar sites?
+							We learn very much. First of all, accessibility has never been in our mind when we make website. I mean, we rarely consider for people with visual impairment and some others that do not use mouse to access our website.
+							From now on, they will be on our first to-do list when we make website, especially including all those 'alt' tag to make it easy for people with visual impairment to access our website. 
+
+							We learn a very basic foundation of what a good website is and what its basic structures are. When it comes to aesthetic part of a website, we learn that good contrast ratio is important and the site should have a consistent look throughout the entire site. </p>
+
+					
+
+
+			</div>
+
+		</div>
+		</div>
+
+	</body>
+
+</html>

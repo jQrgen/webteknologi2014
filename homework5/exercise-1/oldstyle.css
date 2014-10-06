@@ -1,0 +1,59 @@
+#wrapper{
+	margin: 0 auto;
+	width: 841px;
+}
+
+#headline:hover{
+	cursor:pointer;
+}
+
+#headlineFromSubPage:hover{
+	cursor:pointer;
+}
+
+#headline{
+	text-align: center;
+}
+
+#headlineFromSubPage{
+	text-align: center;
+}
+
+#leftArrow{
+	font-size: 60px;
+}
+
+#rightArrow{
+	font-size: 60px;
+}
+
+#leftArrow:hover{
+	cursor:pointer;
+	font-size: 60px;
+}
+
+#rightArrow:hover{
+	cursor:pointer;
+	font-size: 60px;
+}
+
+.mainIMG{
+    display:block;
+    margin:auto;
+    height: 300px;
+}
+
+#rightArrow{
+    float:right;
+}
+
+.nav li{
+	padding-left: 26px;
+}
+
+.textWrapper{
+	margin-left: 220px;
+	margin-top: 20px;
+	width: 400px;
+}
+
