@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Stopwatch</title>
+        <script src="stopwatch.js"></script>
+        <style>
+            #display-area { font-size: 20pt; }
+        </style>
+    </head>
+   <body onload="showClock();">
+        <div>Time: <output id="display-area"></output></div>
+        <button id="toggle-button" onclick="toggleClock()">Start / Stop</button>
+        <button id="reset-button" onclick="resetClock()">reset</button>
+
+    </body>
+</html>
