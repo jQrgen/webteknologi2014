@@ -1,8 +1,10 @@
 window.addEventListener("load", function(event) { 
+
+
+});
+function sortByColumnNumber(sortByColumn){
 	var tablenode = document.getElementById("the-table-body");
 	var tablenodeChildren = tablenode.childNodes;
-
-	var sortByColumn = 1;
 
 	var newNodes = [];
 	for (i=0; i<tablenodeChildren.length; i++)
@@ -17,29 +19,48 @@ window.addEventListener("load", function(event) {
 	}
 
 	// Henter ut det som skal sorteres
-	var arrayToBeSorted = []
+	var arrayToBeSorted = [[],[],[],[],[]]
 	for(i = 0; i<newNodes.length; i++){
-		arrayToBeSorted.push(newNodes[i].getElementsByTagName('td')[sortByColumn-1]);
+		for(j = 0; j<3; j++){
+			arrayToBeSorted[i].push(newNodes[i].getElementsByTagName('td')[j].innerHTML);
+		}	
 	}
 
-	// tester litt FORTSETT HER, HER MÅ JEG SORTERE KODEN
-	arrayToBeSorted[2] = document.createElement("TD");
-	var text = document.createTextNode("Y");
-	arrayToBeSorted[2].appendChild(text)
+	arrayToBeSorted.sort(function(a, b) {
+	    var valueA, valueB;
 
+	    valueA = a[sortByColumn - 1]; 
+	    valueB = b[sortByColumn - 1];
+	    if(typeof valueA == 'string' || valueA instanceof String){ // Check if string
+	    	if(valueA.charCodeAt(0) < valueB.charCodeAt(0)){
+	    		return -1;
+	    	}
+	    	else if(valueA.charCodeAt(0) > valueB.charCodeAt(0)){
+	    		return 1;
+	    	}
+	    }else{
+		    if (valueA < valueB) {
+		        return -1;
+		    }
+		    else if (valueA > valueB) {
+		        return 1;
+		    }
+	    }
+	    return 0;
+	});
 
 	// Setter tilbake den sorterte arrayen inn i de nye nodene
 	for(i = 0; i<newNodes.length; i++){
-		newNodes[i].replaceChild(arrayToBeSorted[i], newNodes[i].getElementsByTagName('td')[sortByColumn-1]);
-		console.log(newNodes[i].getElementsByTagName('td')[sortByColumn-1]);
+		for(j = 0; j<3; j++){
+			newNodes[i].getElementsByTagName('td')[j].innerHTML = arrayToBeSorted[i][j];
+		}
 	}	
 
 	// Legger til de nye nodene i DOM
 	for(i = 0; i<newNodes.length; i++){
 		tablenode.appendChild(newNodes[i]);
 	};
-
-});
+}
 
 function isElement(o){
   return (
