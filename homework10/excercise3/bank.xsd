@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!-- 
+
+	Her har jeg brukt denne til å validere: 
+	http://www.freeformatter.com/xml-validator-xsd.html
+
+-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://www.w3schools.com"
+xmlns="http://www.w3schools.com"
+elementFormDefault="qualified"
+attributeFormDefault="unqualified"
+>
+
+<xs:complexType name="account">
+	<xs:sequence>
+		<xs:element name="balance">
+			<xs:simpleType>
+				<xs:restriction base="xs:decimal">
+					<xs:minInclusive value="-5000"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+	</xs:sequence>
+	<xs:attribute type="xs:string" name="id" use="optional"/>
+	<xs:attribute type="xs:float" name="interest" use="optional"/>
+</xs:complexType>
+
+  <xs:element name="bank">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="accounts">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="savings_accounts">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="savings_account" type="account" maxOccurs="unbounded" minOccurs="0"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="checking_accounts">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="checking_account" type="account" maxOccurs="unbounded" minOccurs="0"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="customers">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="customer" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="name"/>
+                    <xs:element type="xs:string" name="address"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="id" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="customer_accounts">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="customer_account" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="customer_id" use="optional"/>
+                      <xs:attribute type="xs:string" name="account_id" use="optional"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

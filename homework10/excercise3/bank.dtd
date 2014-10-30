@@ -1,0 +1,22 @@
+<!-- 
+	Her har jeg lagt inn hele scripten i .xml filen, 
+	validert hos w3c, også splitta opp filene igjen.
+-->
+
+<!ELEMENT bank (accounts, customers, customer_accounts)>
+
+<!ELEMENT accounts (savings_accounts, checking_accounts)>
+<!ELEMENT savings_accounts (savings_account*)>
+<!ELEMENT savings_account (balance)>
+<!ELEMENT checking_accounts (checking_account*)>
+<!ELEMENT checking_account (balance)>
+<!ELEMENT balance (ANY)>
+
+
+<!ELEMENT customers (customer*)>
+<!ELEMENT costumer (name, address)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+
+<!ELEMENT customer_accounts (costumer_account*)>
+<!ELEMENT costumer_account EMPTY>
