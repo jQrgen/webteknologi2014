@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JQRGENCANVAS</title>
+        <style>
+            #the-canvas { border: 1px dashed gray }   
+        </style>
+        <script>
+            addEventListener('load', function() {
+                var canvas = document.getElementById('the-canvas');
+                var context = canvas.getContext('2d');
+                var centerX = canvas.width / 2;
+                var centerY = canvas.height / 2;
+                var radius = 70;
+
+                context.arc(centerX - 100, centerY, radius, 0, 2 * Math.PI, false);
+                context.fillStyle = 'red';
+                context.fill();
+
+                context.fillStyle = "blue";
+                context.fillRect(centerX + 60, centerY - 60, 125, 125);
+
+
+            });
+        </script>
+    </head>
+    <body>
+        <canvas id="the-canvas" width="500" height="400">   
+            Your browser does not support the &lt;canvas&gt; element.
+        </canvas>
+    </body>
+</html>

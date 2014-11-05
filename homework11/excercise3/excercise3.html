@@ -1,0 +1,45 @@
+    
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JQRGENCANVAS</title>
+        <style>
+            #the-canvas { border: 1px dashed gray }   
+        </style>
+        <script>
+            addEventListener('load', function() {
+                var canvas = document.getElementById('the-canvas');
+                var width = canvas.width;
+                var height = canvas.height;
+                var context = canvas.getContext('2d');
+                var image = new Image();  
+                image.src = "../img/doge.jpg";
+
+                image.addEventListener('load', function() {
+
+                    setInterval(function(){
+
+                        var time = Date.now() / 1600;
+                        var x = Math.sin(time);
+                        var y = Math.cos(time);
+
+                        var i = (width - 100) * ((1+x)/2);
+                        var j = (height - 100) * ((1+y)/2);
+
+                        context.clearRect( 0 , 0 , width , height );
+
+                        context.drawImage(image,i,j,100,100);
+                    }, 1000/100); // 100 ganger per sekund
+                });
+
+
+            });
+        </script>
+    </head>
+    <body>
+        <canvas id="the-canvas" width="500" height="400">   
+            Your browser does not support the &lt;canvas&gt; element.
+        </canvas>
+    </body>
+</html>

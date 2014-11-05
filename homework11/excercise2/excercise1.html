@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JQRGENCANVAS</title>
+        <style>
+            #the-canvas { border: 1px dashed gray }   
+        </style>
+        <script>
+            addEventListener('load', function() {
+                var canvas = document.getElementById('the-canvas');
+                var context = canvas.getContext('2d');
+                var image = new Image();  
+                image.src = "../img/doge.jpg";
+
+                image.addEventListener('load', function() {
+                   console.log("test");
+                   context.drawImage(image,90,50,300,300);
+                });
+
+            });
+        </script>
+    </head>
+    <body>
+        <canvas id="the-canvas" width="500" height="400">   
+            Your browser does not support the &lt;canvas&gt; element.
+        </canvas>
+    </body>
+</html>
